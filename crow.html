@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stroger</title>
+</head>
+<script>
+    var a=new Array(),n="";
+    a[1]='E';a[2]='m';a[3]=' ';a[4]='Y';a[5]='e';a[6]='u';a[7]=' ';a[8]='A';a[9]='n';a[10]='h';a[11]=' ';a[12]='P';a[13]='h';a[14]='a';a[15]='i';a[16]=' ';a[17]='K';a[18]='h';a[19]='o';a[20]='n';a[21]='g';a[22]='?';a[23]='?';
+    function typeTextarea(){
+        t = document.f.txt.value;
+        j = t.length;
+        if(j > 0)
+        {
+            for(var i=1; i<=j; i++)
+            {
+                n = n + a[i];
+                if(i == 23)
+                {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n="";
+        setTimeout("typeTextarea()", 1);
+    }
+</script>
+<body>
+<center>
+    <h2>Type anthing slowly</h2>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+    </form>
+</center>
+</body>
+</html>
